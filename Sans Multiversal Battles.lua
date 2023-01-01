@@ -6,6 +6,14 @@ local Tab = Window:NewTab("Skins")
 
 local Section = Tab:NewSection("Skins")
 
+Section:NewButton("Remove Anti-Hack", "Left CTRL + Click", function()
+game:GetService("StarterPlayer").StarterPlayerScripts.AFK:Remove()
+wait(0.5)
+game:GetService("StarterPlayer").StarterPlayerScripts.Anti:Remove()
+wait(0.4)
+game:GetService("StarterPlayer").StarterPlayerScripts.AE:Remove()
+end)
+
 Section:NewButton("ShatteredDream", "ButtonInfo", function()
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").GamepassCharacters.ShatteredDream.ShatteredDream.Head.CFrame 
 end)
